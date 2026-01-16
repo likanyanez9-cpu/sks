@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* VIDEO GLOBAL */
+#globalVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+    filter: grayscale(1) contrast(1.2) brightness(0.85);
+}
+
+/* OVERLAY */
+.global-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -4;
+}
+
+/* INTRO */
+#intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+#intro.exit {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(8px);
+}
+
+#intro h1 {
+    font-size: 6rem;
+    letter-spacing: 10px;
+}
+
+#intro p {
+    margin: 20px 0;
+    opacity: 0.6;
+}
+
+#intro button {
+    padding: 12px 40px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#intro button:hover {
+    background: white;
+    color: black;
+}
+
+/* MAIN */
+.hidden {
+    display: none;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+main.show {
+    opacity: 1;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 5rem;
+    letter-spacing: 8px;
+}
+
+.hero-content span {
+    opacity: 0.6;
+    letter-spacing: 6px;
+}
+
+/* MUSIC */
+.music {
+    padding: 100px 10%;
+}
+
+.music h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+.track a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.track a:hover {
+    opacity: 1;
+}
+
+/* FOOTER */
+footer {
+    padding: 40px;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 15px;
+    color: white;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
